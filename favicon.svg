@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- emirfaza.com favicon — 35mm film strip with the EF monogram
+       set large like edge-print lettering. Accent follows the site
+       tokens: safelight red in dark mode, film-box amber in light. -->
+  <style>
+    .accent { fill: #e5484d; }
+    @media (prefers-color-scheme: light) { .accent { fill: #b45309; } }
+  </style>
+  <rect width="64" height="64" rx="12" fill="#0e0e11"/>
+  <!-- sprocket holes (paper showing through the strip) -->
+  <g fill="#f4eee1">
+    <rect x="10" y="7"  width="6" height="6"/>
+    <rect x="22" y="7"  width="6" height="6"/>
+    <rect x="34" y="7"  width="6" height="6"/>
+    <rect x="46" y="7"  width="6" height="6"/>
+    <rect x="10" y="51" width="6" height="6"/>
+    <rect x="22" y="51" width="6" height="6"/>
+    <rect x="34" y="51" width="6" height="6"/>
+    <rect x="46" y="51" width="6" height="6"/>
+  </g>
+  <!-- EF monogram, large and blocky -->
+  <g class="accent">
+    <!-- E -->
+    <rect x="10" y="18" width="8" height="28"/>
+    <rect x="10" y="18" width="20" height="8"/>
+    <rect x="10" y="28" width="16" height="8"/>
+    <rect x="10" y="38" width="20" height="8"/>
+    <!-- F -->
+    <rect x="34" y="18" width="8" height="28"/>
+    <rect x="34" y="18" width="20" height="8"/>
+    <rect x="34" y="28" width="16" height="8"/>
+  </g>
+</svg>

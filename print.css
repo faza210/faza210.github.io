@@ -1,0 +1,92 @@
+/* ============================================
+   emirfaza.com — Print Stylesheet (Darkroom redesign)
+   Linked with media="print" in index.html, so these
+   rules apply ONLY when printing / saving as PDF.
+   Hides navigation chrome + film-strip decoration,
+   forces a linear single-column layout and light
+   high-contrast colours.
+   ============================================ */
+
+/* Force light, high-contrast colours even in darkroom mode
+   (must out-specify the [data-theme="dark"] token block) */
+:root, [data-theme="dark"] {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --text: #000000;
+    --muted: #444444;
+    --accent: #333333;
+    --accent-strong: #000000;
+    --hairline: #bbbbbb;
+    --track: #eeeeee;
+    --strip: #ffffff;
+    --hole: #ffffff;
+}
+
+/* Hide navigation chrome, footer, CTAs and film-strip decoration */
+.nav,
+.footer,
+.leader,
+.sprocket-col,
+.projects-cta,
+.hero-actions {
+    display: none;
+}
+
+body {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Linear single-column layout, full width */
+.wrap {
+    max-width: 100%;
+    padding: 0;
+}
+.hero { padding: 0 0 1.5rem; }
+.section { padding: 1.2rem 0 0; }
+
+/* Frames lose the sprocket column (decoration) and print flat */
+.frame {
+    grid-template-columns: 1fr;
+    border: 1px solid #999999;
+}
+.project {
+    border: 1px solid #999999;
+}
+
+/* Projects reflow to a single column on paper */
+.projects-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+/* Disable all animations and transitions on paper */
+*, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Skill bars: browsers strip background colours when printing
+   by default — force exact colour printing for the bar fill */
+.skill-track {
+    border: 1px solid #999999;
+    background: #eeeeee;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+.skill-fill {
+    background: #555555;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+/* Keep entries intact across page breaks */
+.frame,
+.project,
+.skill {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+/* Links print as plain black text */
+a { color: #000000; }
