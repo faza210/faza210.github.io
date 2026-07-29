@@ -1,11 +1,6 @@
-/* ============================================
-   emirfaza.com — Print Stylesheet (Darkroom redesign)
-   Linked with media="print" in index.html, so these
-   rules apply ONLY when printing / saving as PDF.
-   Hides navigation chrome + film-strip decoration,
-   forces a linear single-column layout and light
-   high-contrast colours.
-   ============================================ */
+/* print.css — only runs when printing / saving as PDF (linked with
+   media="print" in index.html). Hides the nav, footer and film-strip
+   decoration, forces one column and light high-contrast colours. */
 
 /* Force light, high-contrast colours even in darkroom mode
    (must out-specify the [data-theme="dark"] token block) */
@@ -15,7 +10,7 @@
     --text: #000000;
     --muted: #444444;
     --accent: #333333;
-    --accent-strong: #000000;
+    --accent-hover: #000000;
     --hairline: #bbbbbb;
     --track: #eeeeee;
     --strip: #ffffff;

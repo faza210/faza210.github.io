@@ -16,19 +16,17 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
 
-    <!-- Anti-flash theme script: external file, parser-blocking so it runs before CSS renders -->
+    <!-- sets the theme before the CSS renders, so there's no flash of the wrong one -->
     <script src="/theme-init.js?v=20"></script>
 
-    <link rel="stylesheet" href="/style.css?v=22">
+    <link rel="stylesheet" href="/style.css?v=24">
     <link rel="stylesheet" href="/print.css?v=20" media="print">
 </head>
 <body>
 
-    <!-- ============================================
-         NAV — sticky top bar. The theme toggle is diegetic:
-         light theme = the lab's light table, dark theme = the
-         darkroom. Same metaphor as the WEB1201 group site.
-         ============================================ -->
+    <!-- NAV — sticky top bar. The toggle names the themes after the
+         film lab: light = light table, dark = darkroom (same metaphor
+         as the WEB1201 group site). -->
     <nav class="nav">
         <div class="nav-inner">
             <a href="/" class="brand"><em>Emir Faza</em><span class="brand-suffix">/ PORTFOLIO</span></a>
@@ -54,10 +52,8 @@
 
     <main class="wrap">
 
-        <!-- ============================================
-             HERO — name set in display serif like a film-brand
-             wordmark; metadata in mono like film edge code.
-             ============================================ -->
+        <!-- HERO — name in display serif like a film-brand wordmark,
+             metadata in mono like film edge code. -->
         <header class="hero reveal">
             <div class="hero-text">
                 <p class="kicker">Portfolio &mdash; Selangor, MY</p>
@@ -99,11 +95,9 @@
             <div class="sprocket-row" aria-hidden="true"></div>
         </div>
 
-        <!-- ============================================
-             01 EXPERIENCE — each entry is a film frame: sprocket
-             column on the left, date + status badge on top.
-             "In development" = current work, "Developed" = finished.
-             ============================================ -->
+        <!-- 01 EXPERIENCE — each entry is a film frame: sprocket column
+             on the left, date + status badge on top. "In development" is
+             current work, "Developed" is finished. -->
         <section class="section reveal" id="experience">
             <div class="sec-head"><span class="sec-index">01</span><h2>Experience</h2><span class="sec-rule"></span></div>
 
@@ -126,7 +120,7 @@
                     <div class="frame-top"><span>Jul 2026 &rarr; Present</span><span class="badge">In Development</span></div>
                     <h3>WEB1201 Final Project — Analog Film Lab</h3>
                     <p class="frame-role">Front-End Developer &middot; Group Project &middot; Selangor, Malaysia</p>
-                    <p>I am building a multi-page group website for an analog film developing and scanning studio, written entirely in vanilla HTML, CSS, and JavaScript. Core features include a filterable catalogue, reviews that persist in localStorage, a multi-step registration flow, and a unified theme system spanning the entire site.</p>
+                    <p>I am building a multi-page group website for an analog film developing and scanning studio, built in plain HTML, CSS, and JavaScript. Core features include a filterable catalogue, reviews that persist in localStorage, a multi-step registration flow, and a unified theme system spanning the entire site.</p>
                     <div class="tags">
                         <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">localStorage</span>
                     </div>
@@ -147,9 +141,7 @@
             </article>
         </section>
 
-        <!-- ============================================
-             02 EDUCATION — frames 04 and 05 of the same roll.
-             ============================================ -->
+        <!-- 02 EDUCATION — frames 04 and 05 of the same roll. -->
         <section class="section reveal" id="education">
             <div class="sec-head"><span class="sec-index">02</span><h2>Education</h2><span class="sec-rule"></span></div>
 
@@ -174,10 +166,8 @@
             </article>
         </section>
 
-        <!-- ============================================
-             03 PROJECTS — CSS Grid of film frames,
-             each with a sprocket strip along its top edge.
-             ============================================ -->
+        <!-- 03 PROJECTS — CSS Grid of film frames, each with a
+             sprocket strip along its top edge. -->
         <section class="section reveal" id="projects">
             <div class="sec-head"><span class="sec-index">03</span><h2>Projects</h2><span class="sec-rule"></span></div>
 
@@ -188,7 +178,7 @@
                     <div class="frame-body">
                         <h3><a href="https://emirfaza.com" target="_blank" rel="noopener noreferrer">Analog Film Lab Website &#8599;</a></h3>
                         <p class="frame-role">WEB1201 Final Project &middot; Group &middot; 2026</p>
-                        <p>My group's WEB1201 final project: a multi-page website for an analog film developing and scanning studio. The catalogue supports live filtering, searching, and sorting; reviews persist in localStorage; registration follows a multi-step flow; and a dual-theme system remembers the visitor's choice across every page. Built entirely in vanilla HTML, CSS, and JavaScript.</p>
+                        <p>My group's WEB1201 final project: a multi-page website for an analog film developing and scanning studio. The catalogue supports live filtering, searching, and sorting; reviews persist in localStorage; registration follows a multi-step flow; and a dual-theme system remembers the visitor's choice across every page. Every page is hand-written HTML, CSS, and JavaScript.</p>
                         <div class="tags">
                             <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
                         </div>
@@ -200,7 +190,7 @@
                     <div class="frame-body">
                         <h3><a href="https://emirfaza.com" target="_blank" rel="noopener noreferrer">Personal Portfolio Site &#8599;</a></h3>
                         <p class="frame-role">This site &middot; Personal &middot; 2026</p>
-                        <p>This site. A single-column editorial layout with a diegetic dual-theme system (light table &harr; darkroom), film-strip motifs, CSS-only skill bars, and a dedicated print stylesheet, self-hosted on a home server behind Nginx and a Cloudflare Tunnel.</p>
+                        <p>This site. A single-column editorial layout with a theme toggle that swaps the light table for the darkroom, film-strip motifs, CSS-only skill bars, and a dedicated print stylesheet, self-hosted on a home server behind Nginx and a Cloudflare Tunnel.</p>
                         <div class="tags">
                             <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Nginx</span>
                         </div>
@@ -236,11 +226,8 @@
             <p class="projects-cta"><a href="https://github.com/faza210" target="_blank" rel="noopener noreferrer">View all repositories on GitHub &#8599;</a></p>
         </section>
 
-        <!-- ============================================
-             04 SKILLS — CSS-only bars: widths come from .lvl-*
-             classes in the stylesheet, never from JS or inline
-             styles (rubric requirement).
-             ============================================ -->
+        <!-- 04 SKILLS — CSS-only bars: widths come from .lvl-* classes
+             in the stylesheet, never JS or inline styles (rubric). -->
         <section class="section reveal" id="skills">
             <div class="sec-head"><span class="sec-index">04</span><h2>Skills</h2><span class="sec-rule"></span></div>
 
@@ -270,9 +257,7 @@
             </div>
         </section>
 
-        <!-- ============================================
-             05 CONTACT
-             ============================================ -->
+        <!-- 05 CONTACT -->
         <section class="section reveal" id="contact">
             <div class="sec-head"><span class="sec-index">05</span><h2>Contact</h2><span class="sec-rule"></span></div>
             <p class="contact-text">I am open to internship and collaboration opportunities in software engineering and AI, and can be reached directly by email or LinkedIn.</p>

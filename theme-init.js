@@ -1,11 +1,6 @@
-/* ============================================
-   emirfaza.com — Theme Initializer
-   Runs parser-blocking in <head> BEFORE the stylesheet
-   renders, so the correct theme is applied immediately
-   and there's no flash of the wrong theme (FOUC).
-   Kept as an external file to comply with the WEB1201
-   "no inline code" rubric requirement (I4).
-   ============================================ */
+/* theme-init.js — runs in <head> before the stylesheet, so the first
+   paint already has the saved theme and there's no flash of the wrong
+   one. External file because the WEB1201 rubric bans inline code (I4). */
 
 (function () {
     try {

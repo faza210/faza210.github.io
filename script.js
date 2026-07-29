@@ -1,21 +1,17 @@
-/* ============================================
-   emirfaza.com — Portfolio JavaScript (Darkroom redesign)
-   Two jobs:
-     1. Theme toggle (light table <-> darkroom), persisted
-        in localStorage, with aria-pressed state
+/* script.js — two jobs:
+     1. Theme toggle (light table <-> darkroom), saved in
+        localStorage, aria-pressed kept in sync
      2. Mobile hamburger menu
-   theme-init.js runs first in <head> and applies the saved
-   theme before first paint, so there is no theme flash.
-   (The entrance animation is pure CSS — see style.css.)
-   ============================================ */
+   theme-init.js (in <head>) sets the initial theme.
+   The entrance animation is pure CSS, see style.css. */
 
 (function () {
     'use strict';
 
     /* --- 1. Theme toggle ---
-       The button always offers the OTHER room: in the light table
-       theme it reads "Darkroom", in the darkroom theme "Light table"
-       (the label swap is pure CSS keyed off [data-theme]). */
+       The button always offers the OTHER room: in the light theme it
+       says "Darkroom", in the dark theme it says "Light table". The
+       label swap is pure CSS, keyed off [data-theme] (see style.css). */
     var root = document.documentElement;
     var toggle = document.querySelector('.theme-toggle');
 

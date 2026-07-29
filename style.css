@@ -1,12 +1,8 @@
-/* ============================================
-   emirfaza.com — "Darkroom" redesign (24 Jul 2026)
-   Single-column editorial layout with a diegetic
-   dual-theme system: LIGHT TABLE (warm paper, amber)
-   <-> DARKROOM (slate black, maroon, safelight red).
-   Every colour/font/spacing value lives in custom
-   properties so the WEB1201 group site can share
-   the same tokens (cross-page consistency, G1).
-   ============================================ */
+/* style.css — "Darkroom" redesign, 24 Jul 2026.
+   Single-column editorial layout with two themes: LIGHT TABLE (warm
+   paper, amber) and DARKROOM (slate black, maroon, safelight red).
+   Every colour, font and spacing value lives in custom properties so
+   the WEB1201 group site shares the same tokens (G1 consistency). */
 
 /* ---------- Design tokens: LIGHT TABLE (default) ---------- */
 :root {
@@ -15,7 +11,7 @@
     --text: #26201a;          /* warm ink */
     --muted: #6f6556;         /* warm grey — 4.6:1 on paper, passes WCAG AA */
     --accent: #b45309;        /* film-box amber */
-    --accent-strong: #7c3f06; /* amber, darkened for hover */
+    --accent-hover: #7c3f06;  /* darker amber for hover */
     --hairline: #ddd2bb;      /* sepia rule lines */
     --track: #e8dfca;         /* empty skill-bar track */
     --strip: #2b241c;         /* film strip stock */
@@ -36,7 +32,7 @@
     --text: #f2e7d5;          /* warm off-white */
     --muted: #b09a85;         /* pale umber */
     --accent: #e5484d;        /* safelight red */
-    --accent-strong: #f0686c;
+    --accent-hover: #f0686c;  /* hover goes lighter in the darkroom */
     --hairline: #452227;      /* maroon rule lines */
     --track: #2e2e35;         /* neutral empty track */
     --strip: #060608;
@@ -64,7 +60,7 @@ body {
 ::selection { background: var(--accent); color: var(--bg); }
 
 a { color: var(--accent); text-decoration: none; }
-a:hover { color: var(--accent-strong); }
+a:hover { color: var(--accent-hover); }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
@@ -102,7 +98,7 @@ a:hover { color: var(--accent-strong); }
     transition: border-color .2s, color .2s;
 }
 .theme-toggle:hover { border-color: var(--accent); }
-/* The toggle labels are diegetic: you are always offered the OTHER room */
+/* only the OTHER room's label is shown (script.js explains why) */
 [data-theme="light"] .label-lighttable { display: none; }
 [data-theme="dark"] .label-darkroom { display: none; }
 .nav-hamburger {
@@ -118,8 +114,7 @@ a:hover { color: var(--accent-strong); }
     gap: 24px 48px; align-items: start;
 }
 .hero-text, .hero-rest { grid-column: 1; }
-/* The portrait as a developed print: paper border, slight tilt.
-   Print margin is 8px — two units thinner than the original 10px. */
+/* The portrait as a developed print: paper border, slight tilt. */
 .hero-print {
     grid-column: 2; grid-row: 1 / span 2;
     margin: 0;
@@ -135,7 +130,7 @@ a:hover { color: var(--accent-strong); }
     text-transform: uppercase; color: var(--muted);
     margin-top: 10px; text-align: center;
 }
-/* 00A gets the same accent as the 01A-05A leader numbers — it's part
+/* 00A gets the same accent as the 01A-05A leader numbers; it's part
    of the same film roll, one frame before the rest. */
 .hero-print .frame-no { color: var(--accent); }
 .kicker {
@@ -166,7 +161,7 @@ a:hover { color: var(--accent-strong); }
 }
 .btn:hover { border-color: var(--accent); color: var(--accent); }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 700; }
-.btn.primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); color: var(--bg); }
+.btn.primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: var(--bg); }
 
 /* ---------- Film leader divider ---------- */
 .leader { margin: 36px 0 8px; }
@@ -187,7 +182,7 @@ a:hover { color: var(--accent-strong); }
     transition: color .2s ease;
 }
 .frame-numbers a:hover {
-    color: var(--accent-strong);
+    color: var(--accent-hover);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -206,7 +201,7 @@ a:hover { color: var(--accent-strong); }
     margin-bottom: 20px;
     transition: transform .25s var(--ease), border-color .25s;
 }
-/* Same hover feedback as the project cards — every "box" responds */
+/* same hover lift as the project cards */
 .frame:hover { transform: translateY(-3px); border-color: var(--accent); }
 .sprocket-col {
     background: var(--strip);
@@ -301,10 +296,10 @@ a:hover { color: var(--accent-strong); }
 .footer-links a:hover { color: var(--accent); }
 
 /* ---------- Entrance animation ----------
-   Pure-CSS load-in stagger. The 'both' fill keeps elements
-   visible after the animation ends, and with animations
-   disabled (print, reduced motion) elements render at
-   natural opacity — content can never be trapped invisible. */
+   Pure-CSS load-in stagger. The 'both' fill keeps elements visible
+   after the animation ends. With animations disabled (print, reduced
+   motion) everything renders at natural opacity, so content can
+   never get stuck invisible. */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
