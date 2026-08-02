@@ -45,7 +45,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 84px; /* keeps anchored sections clear of the fixed nav */
+    scroll-padding-top: 84px; /* keeps anchored sections clear of the sticky nav */
 }
 
 body {
@@ -67,12 +67,8 @@ a:hover { color: var(--accent-hover); }
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
 
 /* ---------- Nav (Flexbox row, collapses to a hamburger panel) ---------- */
-/* Fixed, not sticky: the compositor pins it, so it cannot shift during
-   momentum scrolls. The body padding replaces the space it leaves in flow;
-   screen-only so print keeps its own layout. */
-@media screen { body { padding-top: 62px; } }
 .nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 20;
+    position: sticky; top: 0; z-index: 20;
     background: var(--bg);
     border-bottom: 1px solid var(--hairline);
     transition: background-color .3s ease;
