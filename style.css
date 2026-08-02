@@ -57,6 +57,10 @@ body {
     transition: background-color .3s ease, color .3s ease;
 }
 
+/* Georgia's default numerals are oldstyle (x-height); lining figures keep
+   digits cap-height in headings (WEB1201 etc.). */
+h1, h2, h3 { font-variant-numeric: lining-nums; }
+
 ::selection { background: var(--accent); color: var(--bg); }
 
 a { color: var(--accent); text-decoration: none; }
@@ -229,6 +233,8 @@ a:hover { color: var(--accent-hover); }
     font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em;
     color: var(--muted); text-transform: uppercase; margin: 6px 0 14px;
 }
+/* Must out-specify .frame-body p (65ch) — role lines are single-line metadata. */
+.frame-body p.frame-role { max-width: none; }
 .frame-body p { max-width: 65ch; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .tag {
@@ -346,4 +352,10 @@ main > .reveal:nth-child(7) { animation-delay: .36s; }
 /* Bio gets intro-copy size on wide layouts; mobile keeps the base 16px. */
 @media (min-width: 761px) {
     .hero .bio { font-size: 1.2rem; }
+    /* Section titles must clearly outrank the hero role line (26.4px). */
+    .sec-head h2 { font-size: 2.2rem; line-height: 1.2; }
+    /* Tighten the display serif at masthead size. */
+    .hero h1 { letter-spacing: -.02em; }
+    /* Functional microcopy to the 12px legibility floor; decorative texture stays small. */
+    .nav-links a, .btn, .theme-toggle, .kicker, .frame-top, .frame-role { font-size: .75rem; }
 }
