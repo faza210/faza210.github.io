@@ -46,6 +46,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 84px; /* keeps anchored sections clear of the sticky nav */
+    overscroll-behavior-y: none; /* stops the macOS rubber-band pulling the sticky nav with the document */
 }
 
 body {
