@@ -341,3 +341,9 @@ main > .reveal:nth-child(7) { animation-delay: .36s; }
     .contact-row { flex-direction: column; gap: 2px; }
     .footer-inner { flex-direction: column; gap: 10px; text-align: center; }
 }
+
+/* ---------- Desktop-only refinements ---------- */
+/* Bio gets intro-copy size on wide layouts; mobile keeps the base 16px. */
+@media (min-width: 761px) {
+    .hero .bio { font-size: 1.2rem; }
+}
