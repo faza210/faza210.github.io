@@ -1,4 +1,4 @@
-/* script.js — two jobs:
+/* script.js has two jobs:
      1. Theme toggle (light table <-> darkroom), saved in
         localStorage, aria-pressed kept in sync
      2. Mobile hamburger menu

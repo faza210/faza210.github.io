@@ -1,4 +1,4 @@
-/* style.css — "Darkroom" redesign, 24 Jul 2026.
+/* style.css: "Darkroom" redesign, 24 Jul 2026.
    Single-column editorial layout with two themes: LIGHT TABLE (warm
    paper, amber) and DARKROOM (slate black, maroon, safelight red).
    Every colour, font and spacing value lives in custom properties so
@@ -6,14 +6,13 @@
 
 /* ---------- Design tokens: LIGHT TABLE (default) ---------- */
 :root {
-    --bg: #f4eee1;            /* warm paper white — the light table surface */
+    --bg: #f4eee1;            /* warm paper white, the light table surface */
     --surface: #fbf7ec;       /* card white */
     --text: #26201a;          /* warm ink */
-    --muted: #6f6556;         /* warm grey — 4.6:1 on paper, passes WCAG AA */
+    --muted: #6f6556;         /* warm grey, 4.6:1 on paper (passes WCAG AA) */
     --accent: #b45309;        /* film-box amber */
     --accent-hover: #7c3f06;  /* darker amber for hover */
     --hairline: #ddd2bb;      /* sepia rule lines */
-    --track: #e8dfca;         /* empty skill-bar track */
     --strip: #2b241c;         /* film strip stock */
     --hole: #f4eee1;          /* sprocket holes = paper showing through */
 
@@ -34,7 +33,6 @@
     --accent: #e5484d;        /* safelight red */
     --accent-hover: #f0686c;  /* hover goes lighter in the darkroom */
     --hairline: #452227;      /* maroon rule lines */
-    --track: #2e2e35;         /* neutral empty track */
     --strip: #060608;
     --hole: #0e0e11;
 }
@@ -233,9 +231,11 @@ a:hover { color: var(--accent-hover); }
     font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em;
     color: var(--muted); text-transform: uppercase; margin: 6px 0 14px;
 }
-/* Must out-specify .frame-body p (65ch) — role lines are single-line metadata. */
+/* must out-specify .frame-body p (65ch), role lines are single-line metadata */
 .frame-body p.frame-role { max-width: none; }
 .frame-body p { max-width: 65ch; }
+/* gap between body paragraphs (the reset zeroes all margins) */
+.frame-body p:not(.frame-role) + p { margin-top: 12px; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .tag {
     font-family: var(--font-mono); font-size: .66rem; letter-spacing: .1em;
@@ -255,25 +255,14 @@ a:hover { color: var(--accent-hover); }
 .project:hover { transform: translateY(-3px); border-color: var(--accent); }
 .project .frame-body { display: flex; flex-direction: column; flex: 1; padding: 20px 24px 24px; }
 .project .tags { margin-top: auto; padding-top: 16px; }
-.projects-cta {
-    margin-top: 22px;
-    font-family: var(--font-mono); font-size: .75rem;
-    letter-spacing: .12em; text-transform: uppercase;
-}
 
-/* ---------- Skill bars (CSS-only: widths come from .lvl-* classes) ---------- */
-.skill { margin-bottom: 18px; }
+/* ---------- Skills (grouped tags) ---------- */
+.skill-group { margin-bottom: 22px; }
 .skill-label {
-    display: flex; justify-content: space-between;
     font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em;
-    text-transform: uppercase; margin-bottom: 7px;
+    text-transform: uppercase;
 }
-.skill-label .level { color: var(--muted); }
-.skill-track { height: 8px; background: var(--track); }
-.skill-fill { height: 100%; background: var(--accent); }
-.lvl-85 { width: 85%; }
-.lvl-70 { width: 70%; }
-.lvl-40 { width: 40%; }
+.skill-group .tags { margin-top: 10px; }
 
 /* ---------- Contact ---------- */
 .contact-text { max-width: 62ch; margin-bottom: 22px; }

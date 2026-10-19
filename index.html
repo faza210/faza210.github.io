@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emir Faza — Computer Science Student & Developer</title>
+    <title>Emir Faza · Computer Science Student</title>
+    <link rel="canonical" href="https://emirfaza.com/">
     <link rel="icon" href="/favicon.ico?v=4" sizes="any">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4">
-    <meta name="description" content="Portfolio of Emir Faza, a Computer Science student at Sunway University interested in software engineering, AI, and web development.">
+    <meta name="description" content="Portfolio of Emir Faza, a Computer Science student at Sunway University interested in software engineering and AI.">
     <meta name="author" content="Emir Faza">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Emir Faza — Computer Science Student">
+    <meta property="og:title" content="Emir Faza · Computer Science Student">
     <meta property="og:description" content="Portfolio of Emir Faza, a Computer Science student at Sunway University.">
     <meta property="og:url" content="https://emirfaza.com">
     <meta property="og:type" content="website">
@@ -24,16 +25,15 @@
 </head>
 <body>
 
-    <!-- NAV — sticky top bar. The toggle names the themes after the
-         film lab: light = light table, dark = darkroom (same metaphor
-         as the WEB1201 group site). -->
+    <!-- nav: sticky top bar. the toggle names the themes after the
+         film lab (light = light table, dark = darkroom), same as the
+         WEB1201 group site -->
     <nav class="nav">
         <div class="nav-inner">
             <a href="/" class="brand"><em>Emir Faza</em><span class="brand-suffix">/ PORTFOLIO</span></a>
             <div class="nav-links" id="nav-links">
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
                 <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
                 <button class="theme-toggle" aria-pressed="true" aria-label="Switch theme">
@@ -52,11 +52,11 @@
 
     <main class="wrap">
 
-        <!-- HERO — name in display serif like a film-brand wordmark,
-             metadata in mono like film edge code. -->
+        <!-- hero: name in display serif like a film-brand wordmark,
+             metadata in mono like film edge code -->
         <header class="hero reveal">
             <div class="hero-text">
-                <p class="kicker">Portfolio &mdash; Selangor, MY</p>
+                <p class="kicker">Portfolio &middot; Selangor, MY</p>
                 <h1>Emir Faza</h1>
                 <p class="role">Computer Science Student</p>
             </div>
@@ -66,205 +66,152 @@
                  00A = the frame before the roll starts (leader is 01A-05A). -->
             <figure class="hero-print">
                 <img src="/portrait.jpg" alt="Professional portrait of Emir Faza" width="640" height="880">
-                <figcaption><span class="frame-no">00A</span> &mdash; FUJIFILM X-T3<br>83mm &middot; f/11 &middot; 1/125s &middot; ISO 320</figcaption>
+                <figcaption><span class="frame-no">00A</span> &middot; FUJIFILM X-T3<br>83mm &middot; f/11 &middot; 1/125s &middot; ISO 320</figcaption>
             </figure>
             <div class="hero-rest">
-                <p class="bio">I am a Computer Science undergraduate at Sunway University, originally from Bandung, Indonesia. Educated under the Cambridge curriculum, I have a strong mathematical foundation and currently focus on software engineering and web development. IELTS 8.0 (CEFR&nbsp;C1).</p>
-                <p class="edge-code">Sunway University &middot; BCS (Hons) &middot; Bandung &rarr; Selangor &middot; IELTS 8.0 C1</p>
+                <p class="bio">I am a Computer Science student at Sunway University, originally from Bandung, Indonesia. I am interested in software engineering and AI, and outside my coursework I run my own home server, which is where this site is hosted.</p>
+                <p class="edge-code">Sunway University &middot; BSc (Hons) Computer Science &middot; Bandung &rarr; Selangor &middot; IELTS 8.0 C1</p>
                 <div class="hero-actions">
                     <a class="btn primary" href="/Emir_Faza_Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
-                    <a class="btn" href="https://github.com/faza210" target="_blank" rel="noopener noreferrer">GitHub / faza210</a>
+                    <a class="btn" href="https://linkedin.com/in/emir-faza-576442217" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </div>
         </header>
 
-        <!-- Film leader divider — doubles as a jump index, handy on
-             mobile where only the hero fits. 01A-04A target the
-             experience/education entries; 05A skips to the flagship
-             project (the SMA entry sits fully in view after a 04A
-             jump on phone screens, so it needed no stop of its own). -->
+        <!-- film leader, doubles as a jump index (handy on phones where
+             only the hero fits). 01A-04A are the four project frames,
+             05A is Sunway; the SMA entry follows right after it -->
         <div class="leader reveal">
             <div class="sprocket-row" aria-hidden="true"></div>
             <nav class="frame-numbers" aria-label="Frame index">
-                <a href="#frame-01" aria-label="Jump to emirfaza.com — Personal Portfolio">01A</a>
-                <a href="#frame-02" aria-label="Jump to WEB1201 Final Project — work experience">02A</a>
-                <a href="#frame-03" aria-label="Jump to first-semester coursework">03A</a>
-                <a href="#frame-04" aria-label="Jump to Sunway University">04A</a>
-                <a href="#project-filmlab" aria-label="Jump to Analog Film Lab Website — selected project">05A</a>
+                <a href="#frame-01" aria-label="Jump to Home Server and Self-Hosting">01A</a>
+                <a href="#frame-02" aria-label="Jump to Latent Image Labs, the WEB1201 group project">02A</a>
+                <a href="#frame-03" aria-label="Jump to the Hydroponic Grow-Bay Simulator, the PRG1203 group project">03A</a>
+                <a href="#frame-04" aria-label="Jump to this portfolio">04A</a>
+                <a href="#frame-05" aria-label="Jump to Sunway University">05A</a>
             </nav>
             <div class="sprocket-row" aria-hidden="true"></div>
         </div>
 
-        <!-- 01 EXPERIENCE — each entry is a film frame: sprocket column
-             on the left, date + status badge on top. "In development" is
-             current work, "Developed" is finished. -->
-        <section class="section reveal" id="experience">
-            <div class="sec-head"><span class="sec-index">01</span><h2>Experience</h2><span class="sec-rule"></span></div>
-
-            <article class="frame" id="frame-01">
-                <div class="sprocket-col" aria-hidden="true"></div>
-                <div class="frame-body">
-                    <div class="frame-top"><span>Jul 2026 &rarr; Present</span><span class="badge">In Development</span></div>
-                    <h3>emirfaza.com — Personal Portfolio</h3>
-                    <p class="frame-role">Independent Developer &middot; Personal Project &middot; Selangor, Malaysia</p>
-                    <p>I designed, built, and self-host this site using vanilla HTML, CSS, and JavaScript, with no frameworks. It is deployed on a home server via Nginx and a Cloudflare Tunnel, with custom DNS, security headers, and a dedicated print stylesheet.</p>
-                    <div class="tags">
-                        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Nginx</span><span class="tag">Cloudflare</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="frame" id="frame-02">
-                <div class="sprocket-col" aria-hidden="true"></div>
-                <div class="frame-body">
-                    <div class="frame-top"><span>Jul 2026 &rarr; Present</span><span class="badge">In Development</span></div>
-                    <h3>WEB1201 Final Project — Analog Film Lab</h3>
-                    <p class="frame-role">Front-End Developer &middot; Group Project &middot; Selangor, Malaysia</p>
-                    <p>I am building a multi-page group website for an analog film developing and scanning studio, built in plain HTML, CSS, and JavaScript. Core features include a filterable catalogue, reviews that persist in localStorage, a multi-step registration flow, and a unified theme system spanning the entire site.</p>
-                    <div class="tags">
-                        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">localStorage</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="frame" id="frame-03">
-                <div class="sprocket-col" aria-hidden="true"></div>
-                <div class="frame-body">
-                    <div class="frame-top"><span>Feb 2026 &rarr; Apr 2026</span><span class="badge muted-badge">Developed</span></div>
-                    <h3>Sunway University — First-Semester Coursework</h3>
-                    <p class="frame-role">Student Developer &middot; Coursework &middot; Selangor, Malaysia</p>
-                    <p>I completed first-semester coursework in programming fundamentals with Python, through weekly labs and assignments covering control flow, functions, data structures, and introductory problem-solving.</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <!-- 02 EDUCATION — frames 04 and 05 of the same roll. -->
-        <section class="section reveal" id="education">
-            <div class="sec-head"><span class="sec-index">02</span><h2>Education</h2><span class="sec-rule"></span></div>
-
-            <article class="frame" id="frame-04">
-                <div class="sprocket-col" aria-hidden="true"></div>
-                <div class="frame-body">
-                    <div class="frame-top"><span>Feb 2026 &rarr; 2029 (Expected)</span><span class="badge">In Development</span></div>
-                    <h3>Sunway University</h3>
-                    <p class="frame-role">Bachelor of Computer Science (Hons) &middot; Selangor, Malaysia</p>
-                    <p>Full-time, 3-year programme — Faculty of Engineering and Technology, Department of Smart Computing and Cyber Resilience.</p>
-                </div>
-            </article>
-
-            <article class="frame" id="frame-05">
-                <div class="sprocket-col" aria-hidden="true"></div>
-                <div class="frame-body">
-                    <div class="frame-top"><span>2021 &rarr; 2024</span><span class="badge muted-badge">Developed</span></div>
-                    <h3>SMA Al-Irsyad Satya</h3>
-                    <p class="frame-role">MIPA — Mathematics &amp; Natural Sciences &middot; Bandung, Indonesia</p>
-                    <p>Cambridge International School (Centre ID234). I graduated in May 2024, having completed a senior mathematics curriculum modelled on Cambridge standards.</p>
-                </div>
-            </article>
-        </section>
-
-        <!-- 03 PROJECTS — CSS Grid of film frames, each with a
-             sprocket strip along its top edge. -->
+        <!-- 01 projects: grid of film frames, sprocket strip along the top edge -->
         <section class="section reveal" id="projects">
-            <div class="sec-head"><span class="sec-index">03</span><h2>Projects</h2><span class="sec-rule"></span></div>
+            <div class="sec-head"><span class="sec-index">01</span><h2>Projects</h2><span class="sec-rule"></span></div>
 
             <div class="projects-grid">
 
-                <article class="project" id="project-filmlab">
+                <article class="project" id="frame-01">
                     <div class="sprocket-row" aria-hidden="true"></div>
                     <div class="frame-body">
-                        <h3><a href="https://emirfaza.com" target="_blank" rel="noopener noreferrer">Analog Film Lab Website &#8599;</a></h3>
-                        <p class="frame-role">WEB1201 Final Project &middot; Group &middot; 2026</p>
-                        <p>My group's WEB1201 final project: a multi-page website for an analog film developing and scanning studio. The catalogue supports live filtering, searching, and sorting; reviews persist in localStorage; registration follows a multi-step flow; and a dual-theme system remembers the visitor's choice across every page. Every page is hand-written HTML, CSS, and JavaScript.</p>
+                        <h3>Home Server and Self-Hosting</h3>
+                        <p class="frame-role">Personal &middot; Jul 2026 to present</p>
+                        <p>I host this site from a Windows PC at home, with the web stack running in WSL (Ubuntu). My home connection sits behind carrier-grade NAT, so nothing on the internet can reach the PC directly. Nginx only listens on the loopback address, and a Cloudflare Tunnel carries the traffic out to Cloudflare, which means no port on my router is open.</p>
+                        <p>Nginx runs as a hardened systemd service with strict security headers and a content security policy. I also set up fail2ban so that repeated failed logins on my private pages turn into IP bans at Cloudflare's edge, and my laptop reaches the PC over a Tailscale network.</p>
                         <div class="tags">
-                            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                            <span class="tag">Linux</span><span class="tag">WSL</span><span class="tag">Nginx</span><span class="tag">Cloudflare Tunnel</span><span class="tag">systemd</span><span class="tag">fail2ban</span><span class="tag">Tailscale</span>
                         </div>
                     </div>
                 </article>
 
-                <article class="project">
+                <article class="project" id="frame-02">
                     <div class="sprocket-row" aria-hidden="true"></div>
                     <div class="frame-body">
-                        <h3><a href="https://emirfaza.com" target="_blank" rel="noopener noreferrer">Personal Portfolio Site &#8599;</a></h3>
-                        <p class="frame-role">This site &middot; Personal &middot; 2026</p>
-                        <p>This site. A single-column editorial layout with a theme toggle that swaps the light table for the darkroom, film-strip motifs, CSS-only skill bars, and a dedicated print stylesheet, self-hosted on a home server behind Nginx and a Cloudflare Tunnel.</p>
+                        <h3><a href="https://project.emirfaza.com" target="_blank" rel="noopener noreferrer">Latent Image Labs &#8599;</a></h3>
+                        <p class="frame-role">WEB1201 Final Project &middot; Group of 4 &middot; Jul to Aug 2026</p>
+                        <p>My group's WEB1201 final project, a multi-page website for an analog film developing and scanning studio. I set up the shared repository, the live deployment and the design system (colour tokens, type, and the light table and darkroom themes), and I built the theme toggle that remembers the visitor's choice on every page.</p>
+                        <p>The site also has a catalogue with live filtering, search and sorting, a three-step registration flow, and a review module that saves to localStorage.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">localStorage</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project" id="frame-03">
+                    <div class="sprocket-row" aria-hidden="true"></div>
+                    <div class="frame-body">
+                        <h3>Hydroponic Grow-Bay Simulator</h3>
+                        <p class="frame-role">PRG1203 &middot; Group project (Safelight) &middot; Jul to Aug 2026</p>
+                        <p>A Java console simulation of a hydroponic farm, where grow bays with their own pumps, sensors and nutrient tanks are advanced day by day. Each crop type has its own nutrient, light and pH needs, which the program handles through polymorphism, and planting a crop in an incompatible bay throws a checked exception.</p>
+                        <p>I designed the simulation engine and the exception handling, set up the group's shared repository and integrated the final program.</p>
+                        <div class="tags">
+                            <span class="tag">Java</span><span class="tag">OOP</span><span class="tag">Git</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project" id="frame-04">
+                    <div class="sprocket-row" aria-hidden="true"></div>
+                    <div class="frame-body">
+                        <h3><a href="https://github.com/faza210/faza210.github.io" target="_blank" rel="noopener noreferrer">This Portfolio &#8599;</a></h3>
+                        <p class="frame-role">Personal &middot; Jul 2026 to present</p>
+                        <p>A one-page portfolio styled after a film lab. It switches between a light table theme and a darkroom theme, uses film-strip details for its sections, and has a print stylesheet that turns the page into a plain document. I started it for WEB1201 and keep it up to date.</p>
+                        <p>The link above opens its source on GitHub, which also serves as a fallback copy of the site.</p>
                         <div class="tags">
                             <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Nginx</span>
                         </div>
                     </div>
                 </article>
 
-                <article class="project">
-                    <div class="sprocket-row" aria-hidden="true"></div>
-                    <div class="frame-body">
-                        <h3><a href="https://github.com/faza210" target="_blank" rel="noopener noreferrer">OOP Coursework Projects &#8599;</a></h3>
-                        <p class="frame-role">PRG1203 &middot; Coursework &middot; 2026</p>
-                        <p>Java applications developed for PRG1203 Object-Oriented Programming Fundamentals, in which I applied encapsulation, inheritance, polymorphism, and abstraction across weekly labs and semester assignments.</p>
-                        <div class="tags">
-                            <span class="tag">Java</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project">
-                    <div class="sprocket-row" aria-hidden="true"></div>
-                    <div class="frame-body">
-                        <h3><a href="https://github.com/faza210" target="_blank" rel="noopener noreferrer">Python Programming Labs &#8599;</a></h3>
-                        <p class="frame-role">First Semester &middot; Coursework &middot; 2026</p>
-                        <p>My first-semester programming coursework, completed in Python: lab exercises and assignments covering control flow, functions, data structures, and introductory problem-solving.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                        </div>
-                    </div>
-                </article>
-
             </div>
-
-            <p class="projects-cta"><a href="https://github.com/faza210" target="_blank" rel="noopener noreferrer">View all repositories on GitHub &#8599;</a></p>
         </section>
 
-        <!-- 04 SKILLS — CSS-only bars: widths come from .lvl-* classes
-             in the stylesheet, never JS or inline styles. -->
+        <!-- 02 education: film frames with a sprocket column, date + status
+             badge on top ("in development" = current, "developed" = done) -->
+        <section class="section reveal" id="education">
+            <div class="sec-head"><span class="sec-index">02</span><h2>Education</h2><span class="sec-rule"></span></div>
+
+            <article class="frame" id="frame-05">
+                <div class="sprocket-col" aria-hidden="true"></div>
+                <div class="frame-body">
+                    <div class="frame-top"><span>Feb 2026 &rarr; 2029 (Expected)</span><span class="badge">In Development</span></div>
+                    <h3>Sunway University</h3>
+                    <p class="frame-role">BSc (Hons) Computer Science &middot; Selangor, Malaysia</p>
+                    <p>I made the Dean's List of the Faculty of Engineering and Technology for the May 2026 semester, and my CGPA after the first two semesters is 3.80. I also hold the Sunway Entrance Scholarship, awarded in 2026.</p>
+                    <p>Completed courses include Programming Principles (Python), Object-Oriented Programming Fundamentals (Java), Web Fundamentals, Computer Organisation, Computer Mathematics, and AI Foundation and Applications. This semester I am taking Database Fundamentals, Networking Principles, Operating System Fundamentals, and Systems Analysis and Design.</p>
+                </div>
+            </article>
+
+            <article class="frame" id="frame-06">
+                <div class="sprocket-col" aria-hidden="true"></div>
+                <div class="frame-body">
+                    <div class="frame-top"><span>2021 &rarr; 2024</span><span class="badge muted-badge">Developed</span></div>
+                    <h3>SMA Al-Irsyad Satya</h3>
+                    <p class="frame-role">MIPA (Mathematics &amp; Natural Sciences) &middot; Bandung, Indonesia</p>
+                    <p>A Cambridge International School. I graduated in May 2024 with a transcript average of 84.47, including 89.26 in Mathematics and 87.00 in Physics.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- 03 skills: grouped tags, only things with a project or a
+             finished course behind them -->
         <section class="section reveal" id="skills">
-            <div class="sec-head"><span class="sec-index">04</span><h2>Skills</h2><span class="sec-rule"></span></div>
+            <div class="sec-head"><span class="sec-index">03</span><h2>Skills</h2><span class="sec-rule"></span></div>
 
-            <div class="skill">
-                <div class="skill-label"><span>Python</span><span class="level">Advanced &mdash; 85%</span></div>
-                <div class="skill-track">
-                    <div class="skill-fill lvl-85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency: 85%"></div>
-                </div>
+            <div class="skill-group">
+                <p class="skill-label">Programming</p>
+                <div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">C</span></div>
             </div>
-            <div class="skill">
-                <div class="skill-label"><span>Java</span><span class="level">Proficient &mdash; 70%</span></div>
-                <div class="skill-track">
-                    <div class="skill-fill lvl-70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Java proficiency: 70%"></div>
-                </div>
+            <div class="skill-group">
+                <p class="skill-label">Web</p>
+                <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive layout</span><span class="tag">Accessibility</span><span class="tag">localStorage</span></div>
             </div>
-            <div class="skill">
-                <div class="skill-label"><span>JavaScript</span><span class="level">Proficient &mdash; 70%</span></div>
-                <div class="skill-track">
-                    <div class="skill-fill lvl-70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency: 70%"></div>
-                </div>
+            <div class="skill-group">
+                <p class="skill-label">Infrastructure</p>
+                <div class="tags"><span class="tag">Linux</span><span class="tag">Nginx</span><span class="tag">Cloudflare Tunnel</span><span class="tag">DNS</span><span class="tag">systemd</span><span class="tag">Tailscale</span></div>
             </div>
-            <div class="skill">
-                <div class="skill-label"><span>C (C17)</span><span class="level">Foundational &mdash; 40%</span></div>
-                <div class="skill-track">
-                    <div class="skill-fill lvl-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="C proficiency: 40%"></div>
-                </div>
+            <div class="skill-group">
+                <p class="skill-label">Tools</p>
+                <div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Linux command line</span></div>
             </div>
         </section>
 
-        <!-- 05 CONTACT -->
+        <!-- 04 contact -->
         <section class="section reveal" id="contact">
-            <div class="sec-head"><span class="sec-index">05</span><h2>Contact</h2><span class="sec-rule"></span></div>
-            <p class="contact-text">I am open to internship and collaboration opportunities in software engineering and AI, and can be reached directly by email or LinkedIn.</p>
+            <div class="sec-head"><span class="sec-index">04</span><h2>Contact</h2><span class="sec-rule"></span></div>
+            <p class="contact-text">I am looking for internship and collaboration opportunities in software engineering and AI. Email is the quickest way to reach me, and I am also on LinkedIn.</p>
             <div class="contact-list">
                 <div class="contact-row">
                     <span class="contact-label">Email</span>
-                    <a href="mailto:mail@emirfaza.com">mail@emirfaza.com</a>
+                    <a href="mailto:dev@emirfaza.com">dev@emirfaza.com</a>
                 </div>
                 <div class="contact-row">
                     <span class="contact-label">LinkedIn</span>
@@ -277,10 +224,10 @@
 
     <footer class="footer">
         <div class="wrap footer-inner">
-            <p>&copy; 2026 Emir Faza &mdash; built with vanilla HTML, CSS &amp; JavaScript</p>
+            <p>&copy; 2026 Emir Faza &middot; built with vanilla HTML, CSS &amp; JavaScript</p>
             <div class="footer-links">
                 <a href="https://github.com/faza210" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="mailto:mail@emirfaza.com">Email</a>
+                <a href="mailto:dev@emirfaza.com">Email</a>
                 <a href="https://linkedin.com/in/emir-faza-576442217" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
         </div>

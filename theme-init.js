@@ -1,4 +1,4 @@
-/* theme-init.js — runs in <head> before the stylesheet, so the first
+/* theme-init.js runs in <head> before the stylesheet, so the first
    paint already has the saved theme and there's no flash of the wrong
    one. External file because the WEB1201 rubric bans inline code (I4). */
 

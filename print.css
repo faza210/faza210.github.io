@@ -1,4 +1,4 @@
-/* print.css — only runs when printing / saving as PDF (linked with
+/* print.css: only runs when printing / saving as PDF (linked with
    media="print" in index.html). Hides the nav, footer and film-strip
    decoration, forces one column and light high-contrast colours. */
 
@@ -12,7 +12,6 @@
     --accent: #333333;
     --accent-hover: #000000;
     --hairline: #bbbbbb;
-    --track: #eeeeee;
     --strip: #ffffff;
     --hole: #ffffff;
 }
@@ -22,7 +21,7 @@
 .footer,
 .leader,
 .sprocket-col,
-.projects-cta,
+.sprocket-row,
 .hero-actions {
     display: none;
 }
@@ -61,24 +60,10 @@ body {
     transition: none !important;
 }
 
-/* Skill bars: browsers strip background colours when printing
-   by default — force exact colour printing for the bar fill */
-.skill-track {
-    border: 1px solid #999999;
-    background: #eeeeee;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-}
-.skill-fill {
-    background: #555555;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-}
-
 /* Keep entries intact across page breaks */
 .frame,
 .project,
-.skill {
+.skill-group {
     break-inside: avoid;
     page-break-inside: avoid;
 }
