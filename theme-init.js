@@ -1,6 +1,6 @@
 /* theme-init.js runs in <head> before the stylesheet, so the first
-   paint already has the saved theme and there's no flash of the wrong
-   one. External file because the WEB1201 rubric bans inline code (I4). */
+   paint already has the saved theme and there is no flash of the wrong
+   one. It is an external file so the page has no inline scripts. */
 
 (function () {
     try {
