@@ -105,7 +105,7 @@
                         <h3>Home Server and Self-Hosting</h3>
                         <p class="frame-role">Personal &middot; Jul 2026 to present</p>
                         <p>I host this site from a Windows PC at home, with the web stack running in WSL (Ubuntu). My home connection sits behind carrier-grade NAT, so nothing on the internet can reach the PC directly. Nginx only listens on the loopback address, and a Cloudflare Tunnel carries the traffic out to Cloudflare, which means no port on my router is open.</p>
-                        <p>Nginx runs as a hardened systemd service with strict security headers and a content security policy. I also set up fail2ban so that repeated failed logins on my private pages turn into IP bans at Cloudflare's edge, and my laptop reaches the PC over a Tailscale network.</p>
+                        <p>Nginx runs as a hardened systemd service with strict security headers and a content security policy. I also set up fail2ban so that repeated failed logins turn into IP bans at Cloudflare's edge, and my laptop reaches the PC over a Tailscale network.</p>
                         <p>On the same machine I run Hermes Agent, an open-source AI agent that I use every day through Telegram. I set up its scheduled jobs and choose which language model handles each kind of task, based on benchmarks I run on them. I also keep a set of local fixes to its source code and carry them across every update.</p>
                         <div class="tags">
                             <span class="tag">Linux</span><span class="tag">WSL</span><span class="tag">Nginx</span><span class="tag">Cloudflare Tunnel</span><span class="tag">systemd</span><span class="tag">fail2ban</span><span class="tag">Tailscale</span>
