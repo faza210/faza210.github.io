@@ -10,10 +10,11 @@
     --surface: #fbf7ec;       /* card white */
     --text: #26201a;          /* warm ink */
     --muted: #6f6556;         /* warm grey, 4.6:1 on paper (passes WCAG AA) */
-    --accent: #b45309;        /* film-box amber */
+    --accent: #af5009;        /* film-box amber, 4.5:1 on paper */
     --accent-hover: #7c3f06;  /* darker amber for hover */
     --hairline: #ddd2bb;      /* sepia rule lines */
     --strip: #2b241c;         /* film strip stock */
+    --accent-strip: #e0a24a;  /* amber that reads on the strip */
     --hole: #f4eee1;          /* sprocket holes = paper showing through */
 
     --font-display: Georgia, 'Times New Roman', serif;
@@ -34,6 +35,7 @@
     --accent-hover: #f0686c;  /* hover goes lighter in the darkroom */
     --hairline: #452227;      /* maroon rule lines */
     --strip: #060608;
+    --accent-strip: #e5484d;
     --hole: #0e0e11;
 }
 
@@ -180,7 +182,7 @@ a:hover { color: var(--accent-hover); }
     display: flex; justify-content: space-around; padding: 7px 0;
 }
 .frame-numbers a {
-    color: var(--accent);
+    color: var(--accent-strip);
     padding: 4px 8px; /* widens the tap target for phone screens */
     transition: color .2s ease;
 }
