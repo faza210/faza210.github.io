@@ -15,6 +15,7 @@
     --hairline: #ddd2bb;      /* sepia rule lines */
     --strip: #2b241c;         /* film strip stock */
     --accent-strip: #e0a24a;  /* amber that reads on the strip */
+    --accent-strip-hover: #f0c27a;
     --hole: #f4eee1;          /* sprocket holes = paper showing through */
 
     --font-display: Georgia, 'Times New Roman', serif;
@@ -36,6 +37,7 @@
     --hairline: #452227;      /* maroon rule lines */
     --strip: #060608;
     --accent-strip: #e5484d;
+    --accent-strip-hover: #f0686c;
     --hole: #0e0e11;
 }
 
@@ -186,8 +188,9 @@ a:hover { color: var(--accent-hover); }
     padding: 4px 8px; /* widens the tap target for phone screens */
     transition: color .2s ease;
 }
+.frame-numbers a:focus-visible { outline-color: var(--accent-strip); }
 .frame-numbers a:hover {
-    color: var(--accent-hover);
+    color: var(--accent-strip-hover);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
